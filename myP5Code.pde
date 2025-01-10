@@ -5,9 +5,14 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var fireworkX = 20;
+var birdX = 108;
+var birdY = 305;
+var birdsize = 20;
+
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
+ 
  
   background(255,255,255,0);
   
@@ -18,8 +23,18 @@ draw = function(){
   
   //🎯Animation Code Goes Here
   rect(fireworkX, 15, 10, 10);
-  
-  fireworkX = fireworkX + 1;
+  fill (35, 59, 245)
+  ellipse(birdX,birdY,birdsize,birdsize*0.75);
+ 
+ birdX = birdX + 1;
+ birdY = birdY -1;
+ birdsize = birdsize + .5;
+ 
+ if (birdX>400) {
+ birdX = 108
+ birdY = 305
+ birdsize = 20
+ }
 
 }
 
